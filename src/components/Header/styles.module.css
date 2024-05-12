@@ -1,0 +1,70 @@
+.container {
+  min-width: 100vw;
+  height: 6rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  margin-left: 6rem;
+  cursor: pointer;
+}
+
+.logoImg {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+}
+
+.logoIcon {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.options {
+  display: flex;
+  flex-direction: row;
+  margin-right: 6rem;
+  gap: 10rem;
+}
+
+.options ul li {
+  list-style: none;
+  cursor: pointer;
+}
+
+.options h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: rgb(24, 24, 24);
+}
+
+.option {
+  padding: 0.5rem;
+  border-radius: 12px;
+  position: relative;
+}
+
+.option::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(210, 214, 217);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.option:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
