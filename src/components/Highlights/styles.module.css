@@ -1,0 +1,83 @@
+.container {
+  min-width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 3rem 6rem;
+}
+
+.contentContainer {
+    width: 60%;
+    margin-top: 6rem;
+}
+
+.contentContainer span {
+    color: rgb(21, 50, 65);
+}
+
+.title {
+    font-size: 4rem;
+}
+
+.description {
+    font-size: 1.5rem;
+    font-weight: 500;
+    width: 80%;
+    text-justify: initial;
+    margin-top: 2rem;
+}
+
+.description  p span {
+    color: rgb(45, 108, 141);
+}
+
+.btn {
+    margin-top: 3rem;
+    background-color: rgb(45, 108, 141);
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 12px;
+    width: 10rem;
+    height: 4rem;
+    color: rgb(255, 251, 248);
+    font-size: 1.2rem;
+    font-weight: 500;
+    border: none;
+    position: relative;
+}
+
+.btn::after {
+    content: 'Pedir Agora';
+    align-content: center;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(21, 50, 65);
+    transition: left 0.3s ease-in-out;
+}
+
+.btn:hover::after {
+    left: 0;
+}
+
+.slideContainer {
+    width: 40rem;
+    height: 85vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 22rem 22rem 2rem 2rem;
+    overflow: hidden;
+}
+
+.imgContainer {
+    width: 40rem;
+    height: auto;
+}
+
+.highlightImg {
+  width: 40rem;
+  height: auto;
+}
