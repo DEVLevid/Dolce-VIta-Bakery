@@ -38,7 +38,7 @@ const Contact = () => {
                 <div className={styles.placeholder}>Mensagem</div>
               </div>
               <button className={styles.btnSubmit}>
-                Submit <FaArrowRight />
+                Submit <FaArrowRight className={styles.iconSubmit}/>
               </button>
             </div>
           </div>

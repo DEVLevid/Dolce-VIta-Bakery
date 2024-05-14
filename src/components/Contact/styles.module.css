@@ -126,6 +126,16 @@
 .btnSubmit:hover {
     background-color: rgb(21, 50, 65);
     color: rgb(255, 251, 248);
+    transform: translateX(1);
+}
+
+.iconSubmit {
+    transition: transform 0.3s ease;
+}
+
+.btnSubmit:hover .iconSubmit {
+    transition-delay: 0.1s; 
+    transform: translateX(5px); 
 }
 
 .imgContainer {
@@ -142,4 +152,6 @@
     width: 100%;
     height: auto;
 }
+
+
 
