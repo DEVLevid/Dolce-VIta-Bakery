@@ -101,6 +101,7 @@
     background-color: transparent;
     padding: 1rem;
     font-size: 1.2rem;
+    border-radius: 8px;
 }
 
 .textarea::placeholder {
