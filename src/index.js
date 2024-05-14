@@ -4,6 +4,7 @@ import Header from './components/Header/Header'
 import Highlights from './components/Highlights/Highlights'
 import Scrolly from './components/Scroll/Scrolly';
 import Menu from './components/Menu/Menu';
+import Footer from './components/Footer/Footer'
 import './global.css'
 
 
@@ -15,5 +16,6 @@ root.render(
    <Highlights />
    <Scrolly />
    <Menu />
+   <Footer />
   </React.StrictMode>
 );
