@@ -1,6 +1,7 @@
 import styles from "./styles.module.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { register } from "swiper/element/bundle";
+import Scrolly from "../Scroll/Scrolly";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -63,34 +64,36 @@ function Menu() {
   return (
     <div className={styles.container}>
       <h3>Menu</h3>
-      <Swiper
-        slidesPerView={2.5}
-        navigation
-        className={styles.swiper}
-        loop={true}
-        grabCursor={true}
-      >
-        {Data.map(({ image, id, name, description }) => {
-          return (
-            <SwiperSlide className={styles.swiperSlide}>
-              <div className={styles.cardContainer}>
-                <div className={styles.cardContent} key={id}>
-                  <div className={styles.imgContainer}>
-                    <img src={image} alt={name} />
-                  </div>
-                  <div className={styles.descriptionContainer}>
-                    <h3 className={styles.title}>
-                      <span>{name}</span>
-                    </h3>
-                    <p className={styles.description}>{description}</p>
-                    <button className={styles.btn}>Encomendar</button>
+      <Scrolly>
+        <Swiper
+          slidesPerView={2.5}
+          navigation
+          className={styles.swiper}
+          loop={true}
+          grabCursor={true}
+        >
+          {Data.map(({ image, id, name, description }) => {
+            return (
+              <SwiperSlide className={styles.swiperSlide}>
+                <div className={styles.cardContainer}>
+                  <div className={styles.cardContent} key={id}>
+                    <div className={styles.imgContainer}>
+                      <img src={image} alt={name} />
+                    </div>
+                    <div className={styles.descriptionContainer}>
+                      <h3 className={styles.title}>
+                        <span>{name}</span>
+                      </h3>
+                      <p className={styles.description}>{description}</p>
+                      <button className={styles.btn}>Encomendar</button>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </SwiperSlide>
-          );
-        })}
-      </Swiper>
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
+      </Scrolly>
     </div>
   );
 }

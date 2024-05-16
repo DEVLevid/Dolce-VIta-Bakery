@@ -47,8 +47,13 @@
     transition: transform 0.3s ease;
 }
 
-.btnOptions:hover {
-    transform: scale(1.1);
+.iconBtn {
+    transition: transform 0.3s ease;
+}
+
+.btnOptions:hover .iconBtn{
+    transition-delay: 0.1s; 
+    transform: translatey(-5px);
 }
 
 .icon {

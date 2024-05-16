@@ -1,40 +1,33 @@
-import React, { useState, useEffect } from "react";
-import { useSpring, animated } from "react-spring";
-import About from "../About/About";
+import React, { useEffect, useRef } from "react";
+import { motion, useInView, useAnimation } from "framer-motion";
 
-const Scrolly = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [scrollY, setScrollY] = useState(0);
-
+const Scrolly = ({ children, width = "fit-content" || "100%" }) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const mainControls = useAnimation();
+  const slideControls = useAnimation();
   useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  useEffect(() => {
-    if (scrollY > 300) {
-      setIsVisible(true);
+    if (isInView) {
+      mainControls.start("visible");
+      slideControls.start("visible");
     }
-  }, [scrollY]);
-
-  const animationProps = useSpring({
-    opacity: isVisible ? 1 : 0,
-    transform: isVisible ? "translateY(0)" : "translateY(100px)",
-  });
+  }, [isInView, mainControls]);
 
   return (
-    <animated.div style={animationProps}>
-      <>
-        <About />
-      </>
-    </animated.div>
+    <div style={{ position: "relative", width, overflow: "hidden" }}>
+      <motion.div
+        ref={ref}
+        variants={{
+          hidden: { opacity: 0, y: 75 },
+          visible: { opacity: 1, y: 0 },
+        }}
+        initial="hidden"
+        animate={mainControls}
+        transition={{ duration: 0.5, delay: 0.25 }}
+      >
+        {children}
+      </motion.div>
+    </div>
   );
 };
 

@@ -1,6 +1,7 @@
 import styles from "./styles.module.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
+import Scrolly from "../Scroll/Scrolly";
 import "swiper/css";
 import "swiper/css/pagination";
 
@@ -34,21 +35,27 @@ function Highlights() {
       <div className={styles.contentContainer}>
         <div className={styles.title}>
           <h3>
-            <span>Comemore</span> sem perder tempo!
+            <Scrolly>
+              <span>Comemore</span> sem perder tempo!
+            </Scrolly>
           </h3>
         </div>
-        <div className={styles.description}>
-          <p>
-            Bem-vindo à <span>Dolce Vita Bakery</span>, onde cada mordida é uma
-            viagem de sabor à Itália! Delicie-se com os sabores autênticos e os
-            aromas sedutores da nossa seleção de bolos, tortas, biscoitos e
-            doces, feitos com paixão e tradição italiana. Explore o nosso  <span>menu</span> e
-            deixe-se levar pela doçura da Dolce Vita.
-          </p>
-        </div>
-        <button className={styles.btn}>Fazer pedido</button>
-      </div>
 
+        <div className={styles.description}>
+          <Scrolly>
+            <p>
+              Bem-vindo à <span>Dolce Vita Bakery</span>, onde cada mordida é
+              uma viagem de sabor à Itália! Delicie-se com os sabores autênticos
+              e os aromas sedutores da nossa seleção de bolos, tortas, biscoitos
+              e doces, feitos com paixão e tradição italiana. Explore o nosso{" "}
+              <span>menu</span> e deixe-se levar pela doçura da Dolce Vita.
+            </p>
+          </Scrolly>
+        </div>
+        <Scrolly>
+          <button className={styles.btn}>Fazer pedido</button>
+        </Scrolly>
+      </div>
       <Swiper
         className={styles.slideContainer}
         loop={true}
