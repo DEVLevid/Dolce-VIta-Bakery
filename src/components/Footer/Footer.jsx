@@ -1,26 +1,27 @@
-import React from "react";
+import { useState } from "react";
 import styles from "./styles.module.css";
 import { SiFacebook } from "react-icons/si";
 import { RiInstagramFill } from "react-icons/ri";
 import { FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
+  const [activeNav, setActiveNav] = useState("");
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id="footer">
       <div>
         <ul className={styles.infoContainer}>
           <h3>Recursos</h3>
           <li>
-            <a href="">Perguntas Frequentes</a>
+            <a>Perguntas Frequentes</a>
           </li>
           <li>
-            <a href="">FAQ</a>
+            <a >FAQ</a>
           </li>
           <li>
-            <a href="">Entrega</a>
+            <a>Entrega</a>
           </li>
           <li>
-            <a href="">Preços</a>
+            <a>Preços</a>
           </li>
         </ul>
       </div>
@@ -29,16 +30,16 @@ const Footer = () => {
         <ul className={styles.resources}>
           <h3>Empresa</h3>
           <li>
-            <a href="">Home</a>
+            <a href="#home" onClick={()=> setActiveNav("#home")}>Home</a>
           </li>
           <li>
-            <a href="">Sobre nós</a>
+            <a href="#about" onClick={()=> setActiveNav("#about")}>Sobre nós</a>
           </li>
           <li>
-            <a href="">Menu</a>
+            <a href="#menu" onClick={()=> setActiveNav("#menu")}>Menu</a>
           </li>
           <li>
-            <a href="">Contato</a>
+            <a href="#contact" onClick={()=> setActiveNav("#contact")}>Contato</a>
           </li>
         </ul>
       </div>
@@ -61,13 +62,13 @@ const Footer = () => {
         <div className={styles.socialMedia}>
           <h3>Redes Sociais</h3>
           <div className={styles.linkContainer}>
-          <a href="">
+          <a>
             <RiInstagramFill />
           </a>
-          <a href="">
+          <a>
             <SiFacebook />
           </a>
-          <a href="">
+          <a>
             <FaXTwitter />
           </a>
           </div>

@@ -1,27 +1,39 @@
-import React from 'react'
-import styles from './styles.module.css'
-import logo from '../../Assets/logo.png'
+import React, { useState } from 'react';
+import styles from './styles.module.css';
+import logo from '../../Assets/logo.png';
 
 function Header() {
+    const [activeNav, setActiveNav] = useState("#home");
+
     return (
-        <div className={styles.container}>  
-            <div className={styles.logo}> <img src={logo} alt="logo" className={styles.logoImg}/></div>
+        <div className={styles.container} id='header'>  
+            <div className={styles.logo}>
+                <a href="">
+                    <img src={logo} alt="logo" className={styles.logoImg}/>
+                </a>
+            </div>
             <div className={styles.options}>
                 <ul className={styles.option}>
                     <li>
-                        <h3>Sobre nós</h3>
+                        <a href="#about" onClick={() => { setActiveNav("#about")}}>
+                            <h3>Sobre nós</h3>
+                        </a>
                     </li>
                 </ul>
 
                 <ul className={styles.option}>
                     <li>
-                        <h3>Cardápio</h3>
+                        <a href="#menu" onClick={() => { setActiveNav("#menu")}}>
+                            <h3>Cardápio</h3>
+                        </a>
                     </li>
                 </ul>
 
                 <ul className={styles.option}>
                     <li>
-                        <h3>Contato</h3>
+                        <a href="#contact" onClick={() => { setActiveNav("#contact")}}>
+                            <h3>Contato</h3>
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -29,4 +41,4 @@ function Header() {
     )
 }
 
-export default Header
+export default Header;

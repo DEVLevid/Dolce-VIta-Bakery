@@ -30,6 +30,7 @@ ul, li, a {
 
 .infoContainer li a:hover {
     color: rgb(69, 166, 217);
+    cursor: pointer;
 }
 
 .resources li {
@@ -106,6 +107,11 @@ ul, li, a {
 .linkContainer a {
     font-size: 3rem;
 }
+
+
+.linkContainer a:hover {
+    cursor: pointer;
+  }
 
 .container p {
     position: absolute;

@@ -8,7 +8,7 @@ import Scrolly from "../Scroll/Scrolly";
 const Contact = () => {
   return (
    
-      <div className={styles.container}>
+      <div className={styles.container} id="contact">
       <h3>Converse com a gente!</h3>
       <div className={styles.contactContainer}>
       <Scrolly>

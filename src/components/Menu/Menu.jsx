@@ -1,3 +1,4 @@
+import { useState } from "react";
 import styles from "./styles.module.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { register } from "swiper/element/bundle";
@@ -9,6 +10,7 @@ import "swiper/css/scrollbar";
 
 register();
 function Menu() {
+  const [activeNav, setActiveNav] = useState("#menu")
   const Data = [
     {
       image: require("../../Assets/Brownie.png"),
@@ -62,7 +64,7 @@ function Menu() {
   ];
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id="menu">
       <h3>Menu</h3>
       <Scrolly>
         <Swiper
@@ -85,7 +87,7 @@ function Menu() {
                         <span>{name}</span>
                       </h3>
                       <p className={styles.description}>{description}</p>
-                      <button className={styles.btn}>Encomendar</button>
+                      <a href="#contact" className={styles.btnContainer}><button className={styles.btn} onClick={()=> setActiveNav("#contact")}>Encomendar</button></a>
                     </div>
                   </div>
                 </div>

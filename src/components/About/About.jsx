@@ -4,7 +4,7 @@ import Scrolly from "../Scroll/Scrolly";
 
 function About() {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id="about">
       <div className={styles.header}>
         <h3>Sobre a Dolce Vita</h3>
       </div>
@@ -14,9 +14,7 @@ function About() {
           <img src={img1} alt="about" />
         </div>
         <div className={styles.history}>
-          <Scrolly>
             <h4>Nossa História</h4>
-          </Scrolly>
           <Scrolly>
             {" "}
             <p>

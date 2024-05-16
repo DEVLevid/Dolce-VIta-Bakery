@@ -9,7 +9,7 @@
   justify-content: center;
   font-size: 2rem;
   color: rgb(21, 50, 65);
-  margin-bottom: 3rem;
+  margin-bottom: 6rem;
 }
 
 .contentContainer {
@@ -23,7 +23,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  margin-left: 6rem;
+  margin-left: 12rem;
 }
 
 .imgContainer img {
@@ -36,14 +36,12 @@
   width: 60%;
   display: flex;
   flex-direction: column;
-  margin-right: 6rem;
 }
 
 .history h4 {
   margin-bottom: 2rem;
   font-size: 2rem;
   color: rgb(45, 108, 141);
-  align-self: center;
 }
 
 .history p {

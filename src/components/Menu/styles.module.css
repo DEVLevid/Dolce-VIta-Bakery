@@ -5,11 +5,13 @@
     align-items: center;
     margin-top: 6rem;
     gap: 2rem;
+    margin-bottom: 15rem;
 }
 
 .container h3 {
     font-size: 2rem;
     color: rgb(21, 50, 65);
+    margin-bottom: 4rem;
 }
 
 .container span {
@@ -69,14 +71,17 @@
     font-weight: 500;
 }
 
-.btn {
+.btnContainer {
     position: absolute;
+    bottom: 2rem;
+}
+
+.btn {
     gap: 1rem;
     width: 8rem;
     height: 2rem;
     border: none;
     border-radius: 8px;
-    bottom: 2rem;
     font-size: 1rem;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 }

@@ -1,4 +1,5 @@
 import styles from "./styles.module.css";
+import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import Scrolly from "../Scroll/Scrolly";
@@ -6,6 +7,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 function Highlights() {
+  const [sctiveNav, setActiveNav] = useState("#home")
   const Data = [
     {
       id: 1,
@@ -31,7 +33,7 @@ function Highlights() {
   ];
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id="home">
       <div className={styles.contentContainer}>
         <div className={styles.title}>
           <h3>
@@ -53,7 +55,7 @@ function Highlights() {
           </Scrolly>
         </div>
         <Scrolly>
-          <button className={styles.btn}>Fazer pedido</button>
+          <a href="#contact" onClick={()=> setActiveNav("#contact")}><button className={styles.btn}>Fazer pedido</button></a>
         </Scrolly>
       </div>
       <Swiper
