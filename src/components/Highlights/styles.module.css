@@ -8,78 +8,153 @@
 }
 
 .contentContainer {
-    width: 60%;
-    margin-top: 6rem;
+  width: 60%;
+  margin-top: 6rem;
 }
 
 .contentContainer span {
-    color: rgb(21, 50, 65);
+  color: rgb(21, 50, 65);
 }
 
 .title {
-    font-size: 4rem;
+  font-size: 4rem;
 }
 
 .description {
-    font-size: 1.5rem;
-    font-weight: 500;
-    width: 80%;
-    text-justify: initial;
-    margin-top: 2rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  width: 80%;
+  text-justify: initial;
+  margin-top: 2rem;
 }
 
-.description  p span {
-    color: rgb(45, 108, 141);
+.description p span {
+  color: rgb(45, 108, 141);
 }
 
 .btn {
-    margin-top: 3rem;
-    background-color: rgb(45, 108, 141);
-    overflow: hidden;
-    cursor: pointer;
-    border-radius: 12px;
-    width: 10rem;
-    height: 4rem;
-    color: rgb(255, 251, 248);
-    font-size: 1.2rem;
-    font-weight: 500;
-    border: none;
-    position: relative;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  margin-top: 3rem;
+  background-color: rgb(45, 108, 141);
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 12px;
+  width: 10rem;
+  height: 4rem;
+  color: rgb(255, 251, 248);
+  font-size: 1.2rem;
+  font-weight: 500;
+  border: none;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 }
 
 .btn::after {
-    content: 'Pedir Agora';
-    align-content: center;
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background-color: rgb(21, 50, 65);
-    transition: left 0.3s ease-in-out;
+  content: "Pedir Agora";
+  align-content: center;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(21, 50, 65);
+  transition: left 0.3s ease-in-out;
 }
 
 .btn:hover::after {
-    left: 0;
+  left: 0;
 }
 
 .slideContainer {
-    width: 40rem;
-    height: 85vh;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    border-radius: 22rem 22rem 2rem 2rem;
-    overflow: hidden;
+  width: 35vw;
+  height: 80vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 22rem 22rem 2rem 2rem;
+  overflow: hidden;
 }
 
 .imgContainer {
-    width: 40rem;
-    height: auto;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .highlightImg {
-  width: 40rem;
-  height: auto;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 1240px) {
+  .title {
+    font-size: 3rem;
+  }
+
+  .slideContainer {
+    width: 40vw;
+    height: 75vh;
+  }
+
+  .imgContainer {
+    width: 100%;
+    height: auto;
+  }
+
+  .highlightImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 980px) {
+  .container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contentContainer {
+    position: absolute;
+    width: 100vw;
+    top: 70vh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+
+  .title {
+    font-size: 2rem;
+    width: 50vw;
+  }
+
+  .description {
+    display: none;
+  }
+
+  .btn {
+    margin-top: 0;
+  }
+
+  .slideContainer {
+    position: absolute;
+    top: -3rem;
+    width: 50vw;
+    height: 65vh;
+  }
+
+  .imgContainer {
+    width: 100%;
+    height: 100%;
+  }
+
+  .highlightImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
