@@ -1,6 +1,7 @@
 import styles from "./styles.module.css";
 import img1 from "../../Assets/people.jpg";
 import Scrolly from "../Scroll/Scrolly";
+import { MdOutlineBakeryDining } from "react-icons/md";
 
 function About() {
   return (
@@ -14,7 +15,7 @@ function About() {
           <img src={img1} alt="about" />
         </div>
         <div className={styles.history}>
-            <h4>Nossa História</h4>
+          <h4>Nossa História</h4>
           <Scrolly>
             {" "}
             <p>
@@ -57,7 +58,22 @@ function About() {
               cada mordida é uma viagem à Itália!
             </p>
           </Scrolly>
+          <div className={styles.timeline}>
+            <div className={styles.dotInit}></div>
+            <div className={styles.dotMidle}></div>
+            <div className={styles.dotFinal}></div>
+            <MdOutlineBakeryDining className={styles.logo} />
+          </div>
         </div>
+        <p className={styles.fundation}>
+          1987 Dona nona e seus ingredientes 🧁
+        </p>
+        <p className={styles.creation}>
+          Marco e sofia fundam a Dolce vita bakery 😍
+        </p>
+        <p className={styles.location}>
+          Hoje somos mais de 4 unidades espalhadas pelo Brasil e Italia 🙌
+        </p>
       </div>
     </div>
   );
