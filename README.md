@@ -1,70 +1,77 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Dolce vita Bakery 
 
-## Available Scripts
+## Resumo do Projeto 
+[**Dolce Vita Bakery**](https://dolce-vita-bakery.vercel.app/) é um website desenvolvido para uma doceria italiana, criado como parte de um projeto freelancer. O objetivo do site é proporcionar uma plataforma online atrativa e funcional para que a doceria possa exibir seus produtos, compartilhar informações sobre a empresa e facilitar a interação com os clientes.
 
-In the project directory, you can run:
+## Principais Funcionalidades
 
-### `npm start`
+1- **Página inicial**: Uma introdução acolhedora à doceria, com imagens de alta qualidade dos produtos e um design que reflete a atmosfera italiana autêntica.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+2- **Sobre Nós**: Uma seção dedicada à história da Dolce Vita Bakery, destacando seus valores, missão e a equipe por trás da doceria.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+3- **Catálogo de Produtos**: Uma galeria detalhada dos produtos oferecidos, incluindo descrições, ingredientes, preços e opções de personalização.
 
-### `npm test`
+4- **Sistema de Pedidos Online**: Uma interface intuitiva que permite aos clientes fazer pedidos diretamente pelo site, com opções de entrega e retirada.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+5- **Contato**: Formulário de contato, e links para as redes sociais, facilitando a comunicação entre a doceria e seus clientes.
 
-### `npm run build`
+## Tecnologias Utilizadas
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Frontend**: ReactJS, Swipper, Toastfy, Css3, Html5, Javascript.
+- **Design**: Toda a construção do Design do projeto foi realizada por mim, utilizei ferramentas como o Figma e pesquisei por fontes de inspiração no Dribble.
+- **Hospedagem**: Vercel 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Como instalar o projeto ?
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Siga os passos abaixo para clonar e executar o projeto **Dolce Vita Bakery** em sua máquina local.
 
-### `npm run eject`
+### Pré-requisitos
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Certifique-se de ter as seguintes ferramentas instaladas:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **Git**: [Instalar Git](https://git-scm.com/downloads)
+- **Node.js e npm**: [Instalar Node.js](https://nodejs.org/)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Passos para Clonar o Projeto
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+ 1- **Obtenha o URL do Repositório**
 
-## Learn More
+ Vá para o repositório do projeto no GitHub e copie o URL do repositório.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+ 2- **Abra o Terminal**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+ Abra o terminal (ou prompt de comando) na sua máquina.
 
-### Code Splitting
+ 3- **Clone o Repositório**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+ Use o comando `git clone` seguido do URL do repositório para clonar o projeto:
+ ```sh
+ git clone https://github.com/DEVLevid/Dolce-VIta-Bakery
 
-### Analyzing the Bundle Size
+ ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+4- **Acesse o arquivo**
 
-### Making a Progressive Web App
+ Abra o terminal e procure pelo arquivo do projeto:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+ ```cd dolce-vita-bakery```
 
-### Advanced Configuration
+5- **Instale as dependências**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+ Ainda no terminal execute o seguinte comando para instalar todas as dependências do    projeto: 
 
-### Deployment
+``npm install``
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+5- **Execute o Projeto**
 
-### `npm run build` fails to minify
+ Ao executar o projeto, um link com o resultado vai ser aberto no seu navegador padrão de forma automática!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+``npm start``
+
+## Considerações Finais 
+
+O projeto Dolce Vita Bakery foi uma excelente oportunidade para aplicar e expandir minhas habilidades em desenvolvimento web, design UX/UI e e-commerce. O resultado final é um website moderno e funcional que ajuda a doceria a alcançar novos clientes e expandir sua presença online.
+
+
+
