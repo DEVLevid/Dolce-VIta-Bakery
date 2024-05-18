@@ -83,6 +83,7 @@ const Footer = () => {
                 type="text"
                 placeholder="Seu E-mail"
                 className={styles.inpt}
+                required={true}
               />
               <button className={styles.btn} type="submit">Inscreva-se</button>
             </div>
