@@ -1,5 +1,6 @@
 
 # Dolce vita Bakery 
+![Captura de tela 2024-05-18 193545](https://github.com/DEVLevid/Dolce-VIta-Bakery/assets/120687641/8f9cebc3-9cf2-4fe2-a8bf-f4da65bf6690)
 
 ## Resumo do Projeto 
 [**Dolce Vita Bakery**](https://dolce-vita-bakery.vercel.app/) é um website desenvolvido para uma doceria italiana, criado como parte de um projeto freelancer. O objetivo do site é proporcionar uma plataforma online atrativa e funcional para que a doceria possa exibir seus produtos, compartilhar informações sobre a empresa e facilitar a interação com os clientes.
