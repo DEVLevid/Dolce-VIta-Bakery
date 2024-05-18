@@ -3,11 +3,18 @@ import styles from "./styles.module.css";
 import { SiFacebook } from "react-icons/si";
 import { RiInstagramFill } from "react-icons/ri";
 import { FaXTwitter } from "react-icons/fa6";
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 const Footer = () => {
   const [activeNav, setActiveNav] = useState("");
   const [email, setEmail] = useState("");
   const [isEmailValid, setIsEmailValid] = useState(true);
+
+  const toastify = () => {
+    toast.success('Inscrição recebida com sucesso!', {
+    });
+  };
 
   const validateEmail = (email) => {
     const regex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
@@ -25,6 +32,8 @@ const Footer = () => {
       setIsEmailValid(false);
       return;
     }
+    toastify();
+    setEmail("");
   };
   return (
     <div className={styles.container} id="footer">
@@ -84,6 +93,8 @@ const Footer = () => {
                 placeholder="Seu E-mail"
                 className={styles.inpt}
                 required={true}
+                onChange={handleEmailChange}
+                value={email}
               />
               <button className={styles.btn} type="submit">Inscreva-se</button>
             </div>
@@ -113,6 +124,7 @@ const Footer = () => {
         </div>
       </div>
       <p>All rights reserved © DEVLevid</p>
+      <ToastContainer autoClose={8000} />
     </div>
   );
 };

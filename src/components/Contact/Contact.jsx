@@ -4,10 +4,19 @@ import { CiChat1 } from "react-icons/ci";
 import { IoCall } from "react-icons/io5";
 import { FaArrowRight } from "react-icons/fa6";
 import Scrolly from "../Scroll/Scrolly";
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 const Contact = () => {
   const [email, setEmail] = useState("");
   const [isEmailValid, setIsEmailValid] = useState(true);
+  const [nome, setNome] = useState("");
+  const [mensagem, setMensagem] = useState("");
+
+  const toastify = () => {
+    toast.success('Recebemos sua mensagem!', {
+    });
+  };
 
   const validateEmail = (email) => {
     const regex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
@@ -16,7 +25,7 @@ const Contact = () => {
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
-    setIsEmailValid(true); 
+    setIsEmailValid(true);
   };
 
   const handleSubmit = (e) => {
@@ -25,6 +34,10 @@ const Contact = () => {
       setIsEmailValid(false);
       return;
     }
+    toastify();
+    setNome("");
+    setEmail("");
+    setMensagem("");
   };
 
   return (
@@ -45,7 +58,13 @@ const Contact = () => {
               <h4>Mande uma mensagem!</h4>
               <form onSubmit={handleSubmit} className={styles.contactForm}>
                 <div className={styles.inptGroup}>
-                  <input type="text" className={styles.inpt} required={true}/>
+                  <input
+                    type="text"
+                    className={styles.inpt}
+                    value={nome}
+                    onChange={(e) => setNome(e.target.value)}
+                    required={true}
+                  />
                   <div className={styles.placeholder}>Nome</div>
                 </div>
 
@@ -68,9 +87,9 @@ const Contact = () => {
                 </div>
                 <div className={styles.inptGroup}>
                   <textarea
-                    name=""
-                    id=""
                     className={styles.textarea}
+                    value={mensagem}
+                    onChange={(e) => setMensagem(e.target.value)}
                     placeholder="Escreva aqui..."
                     required={true}
                   ></textarea>
@@ -90,6 +109,7 @@ const Contact = () => {
           />
         </div>
       </div>
+      <ToastContainer autoClose={8000} />
     </div>
   );
 };
