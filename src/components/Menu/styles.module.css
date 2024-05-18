@@ -8,10 +8,13 @@
     margin-bottom: 15rem;
 }
 
+.title {
+    margin-bottom: 3rem;
+}
+
 .container h3 {
     font-size: 2rem;
     color: rgb(21, 50, 65);
-    margin-bottom: 4rem;
 }
 
 .container span {
@@ -91,4 +94,3 @@
     background-color: rgb(21, 50, 65);
     color: white;
 }
-

@@ -65,7 +65,7 @@ function Menu() {
 
   return (
     <div className={styles.container} id="menu">
-      <h3>Menu</h3>
+      <h3 className={styles.title}>Menu</h3>
       <Scrolly>
         <Swiper
           slidesPerView={2.5}
@@ -73,6 +73,24 @@ function Menu() {
           className={styles.swiper}
           loop={true}
           grabCursor={true}
+          breakpoints={{
+            576: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
+            1280: {
+              slidesPerView: 1.5,
+              spaceBetween: 20,
+            },
+            1480: {
+              slidesPerView: 2.5,
+              spaceBetween: 20,
+            }
+          }}
         >
           {Data.map(({ image, id, name, description }) => {
             return (
