@@ -45,7 +45,7 @@ const Contact = () => {
               <h4>Mande uma mensagem!</h4>
               <form onSubmit={handleSubmit} className={styles.contactForm}>
                 <div className={styles.inptGroup}>
-                  <input type="text" className={styles.inpt} />
+                  <input type="text" className={styles.inpt} required={true}/>
                   <div className={styles.placeholder}>Nome</div>
                 </div>
 
@@ -55,6 +55,7 @@ const Contact = () => {
                     className={styles.inpt}
                     value={email}
                     onChange={handleEmailChange}
+                    required={true}
                   />
                   <div className={styles.placeholder}>E-mail</div>
                   {!isEmailValid && (
@@ -71,6 +72,7 @@ const Contact = () => {
                     id=""
                     className={styles.textarea}
                     placeholder="Escreva aqui..."
+                    required={true}
                   ></textarea>
                   <div className={styles.placeholder}>Mensagem</div>
                 </div>

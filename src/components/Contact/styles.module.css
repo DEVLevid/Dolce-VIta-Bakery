@@ -217,6 +217,10 @@
     .imgContainer {
        display: none;
     }
+
+    .inptGroup {
+        margin-bottom: 4rem;
+    }
 }
 
 
