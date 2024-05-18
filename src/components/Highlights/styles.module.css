@@ -21,9 +21,9 @@
 }
 
 .description {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   font-weight: 500;
-  width: 80%;
+  width: 70%;
   text-justify: initial;
   margin-top: 2rem;
 }
@@ -156,5 +156,23 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+}
+
+@media (max-width: 600px){
+  .container {
+    margin-bottom: 14rem;
+  }
+
+  .slideContainer {
+    height: 40vh;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .contentContainer {
+    top: 45vh;
   }
 }

@@ -28,7 +28,7 @@ const Footer = () => {
 
       <div>
         <ul className={styles.resources}>
-          <h3>Empresa</h3>
+        <h3>Empresa</h3>
           <li>
             <a href="#home" onClick={()=> setActiveNav("#home")}>Home</a>
           </li>

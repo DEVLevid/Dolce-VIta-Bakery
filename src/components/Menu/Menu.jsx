@@ -87,7 +87,7 @@ function Menu() {
               spaceBetween: 20,
             },
             1480: {
-              slidesPerView: 2.5,
+              slidesPerView: 3.2,
               spaceBetween: 20,
             }
           }}

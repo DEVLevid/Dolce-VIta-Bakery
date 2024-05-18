@@ -1,5 +1,5 @@
 .container {
-  min-width: 100vw;
+  width: 100vw;
   margin-top: 6rem;
 }
 
@@ -32,8 +32,8 @@
 
 .history {
   position: absolute;
-  left: 45vw;
-  width: 80%;
+  left: 37vw;
+  width: 70%;
   display: flex;
   flex-direction: column;
 }
@@ -239,5 +239,51 @@
     position: absolute;
     left: 65vw;
     top: 157.5vh;
+  }
+}
+
+@media (max-width: 650px){
+  .container {
+    margin-bottom: 40rem;
+    position: relative;
+  }
+
+  .container h3 {
+    position: absolute;
+    align-self: center;
+  }
+
+  .history {
+    left: 50vw;
+  }
+
+  h4 {
+    align-self: flex-start;
+  }
+
+  .imgContainer {
+    margin-left: 2rem;
+    position: absolute;
+    top: 25vh;
+  }
+
+  .imgContainer img {
+    height: 30vh;
+  }
+
+  .location, .creation, .fundation {
+    left: 55vw;
+  }
+
+  .location {
+    top: 46vh;
+  }
+
+  .creation {
+    top: 35vh;
+  }
+
+  .fundation {
+    top: 22vh;
   }
 }

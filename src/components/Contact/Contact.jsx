@@ -15,10 +15,10 @@ const Contact = () => {
         <div className={styles.contactContent}>
             <div className={styles.contactOptions}>
               <button className={styles.btnOptions}>
-                Via Chat <CiChat1 className={styles.iconBtn} />
+                <p>Via Chat</p> <CiChat1 className={styles.iconBtn} />
               </button>
               <button className={styles.btnOptions}>
-                Via Call <IoCall className={styles.iconBtn} />
+                 <p>Via Call</p> <IoCall className={styles.iconBtn} />
               </button>
             </div>
           <div className={styles.contactInptContainer}>

@@ -10,14 +10,13 @@
 .container h3 {
     font-size: 2rem;
     color: rgb(21, 50, 65);
-    margin-bottom: 8rem;
+    margin-bottom: 6rem;
 }
 
 .contactContainer { 
     max-width: 100vw;
     display: flex;
-    justify-content: space-between;
-    gap: 10rem;
+    justify-content: space-evenly;
 }
 
 .contactContent {
@@ -147,18 +146,70 @@
 
 .imgContainer {
     height: 40rem;
-    width: 35rem;
-    align-self: center;
+    width: 30vw;
     border-radius: 7rem 2rem 10rem 10rem;
     overflow: hidden;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-    margin-right: 6rem;
+    margin-left: 6rem;
 }
 
 .imgContainer img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
 }
 
+@media (max-width: 1680px){
+    .btnOptions {
+        width: 18rem;
+        height: 3rem;
+        align-items: center;
+        padding: 0;
+    }
+
+    .contactContainer {
+        margin-left: 6rem;
+    }
+
+    .imgContainer {
+        margin-right: 6rem;
+        height: auto;
+        width: 30vw;
+    }
+}
+
+@media (max-width: 1280px){
+    .imgContainer {
+        width: 30vw;
+        height: auto;
+    }
+
+    .contactContent {
+        width: 40vw;
+    }
+}
+
+@media (max-width: 790px){
+
+    .container {
+        position: relative;
+    }
+
+    .contactOptions {
+        flex-direction: column;
+    }
+
+    .contactContainer {
+        margin-left: 0;
+    }
+
+    .btnOptions {
+        width: 12rem;
+    }
+
+    .imgContainer {
+       display: none;
+    }
+}
 
 

@@ -138,6 +138,7 @@
   opacity: 1;
   visibility: visible;
   animation: slideIn 0.5s forwards;
+  z-index: 100;
 }
 
 @keyframes slideIn {

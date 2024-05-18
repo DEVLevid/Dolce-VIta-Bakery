@@ -22,7 +22,7 @@
 }
 
 .swiper {
-    width: 80vw;
+    width: 90vw;
     border-radius: 12px;
     overflow: hidden;
 }
@@ -67,8 +67,9 @@
 }
 
 .description {
-    align-self: center;
     text-align: left;
+    position: absolute;
+    top: 4rem;
     margin: 1rem;
     font-size: 1rem;
     font-weight: 500;
@@ -93,4 +94,10 @@
     cursor: pointer;
     background-color: rgb(21, 50, 65);
     color: white;
+}
+
+@media (max-width: 650px) {
+    .swiper {
+        width: 80vw;
+    }
 }
