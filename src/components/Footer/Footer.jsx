@@ -6,6 +6,26 @@ import { FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
   const [activeNav, setActiveNav] = useState("");
+  const [email, setEmail] = useState("");
+  const [isEmailValid, setIsEmailValid] = useState(true);
+
+  const validateEmail = (email) => {
+    const regex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+    return regex.test(email);
+  };
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+    setIsEmailValid(true);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!validateEmail(email)) {
+      setIsEmailValid(false);
+      return;
+    }
+  };
   return (
     <div className={styles.container} id="footer">
       <div>
@@ -15,7 +35,7 @@ const Footer = () => {
             <a>Perguntas Frequentes</a>
           </li>
           <li>
-            <a >FAQ</a>
+            <a>FAQ</a>
           </li>
           <li>
             <a>Entrega</a>
@@ -28,18 +48,26 @@ const Footer = () => {
 
       <div>
         <ul className={styles.resources}>
-        <h3>Empresa</h3>
+          <h3>Empresa</h3>
           <li>
-            <a href="#home" onClick={()=> setActiveNav("#home")}>Home</a>
+            <a href="#home" onClick={() => setActiveNav("#home")}>
+              Home
+            </a>
           </li>
           <li>
-            <a href="#about" onClick={()=> setActiveNav("#about")}>Sobre nós</a>
+            <a href="#about" onClick={() => setActiveNav("#about")}>
+              Sobre nós
+            </a>
           </li>
           <li>
-            <a href="#menu" onClick={()=> setActiveNav("#menu")}>Menu</a>
+            <a href="#menu" onClick={() => setActiveNav("#menu")}>
+              Menu
+            </a>
           </li>
           <li>
-            <a href="#contact" onClick={()=> setActiveNav("#contact")}>Contato</a>
+            <a href="#contact" onClick={() => setActiveNav("#contact")}>
+              Contato
+            </a>
           </li>
         </ul>
       </div>
@@ -49,28 +77,37 @@ const Footer = () => {
           <h4 className={styles.title}>
             Inscreva-se para saber das novidades!
           </h4>
-          <div className={styles.inptContainer}>
-            <input
-              type="text"
-              placeholder="Seu E-mail"
-              className={styles.inpt}
-            />
-            <button className={styles.btn}>Inscreva-se</button>
-          </div>
+          <form onSubmit={handleSubmit}>
+            <div className={styles.inptContainer}>
+              <input
+                type="text"
+                placeholder="Seu E-mail"
+                className={styles.inpt}
+              />
+              <button className={styles.btn} type="submit">Inscreva-se</button>
+            </div>
+            {!isEmailValid && (
+              <div className={styles.emailValidation}>
+                <p className={styles.emailMessage}>
+                  Por favor digite um email válido!
+                </p>
+              </div>
+            )}
+          </form>
         </div>
 
         <div className={styles.socialMedia}>
           <h3>Redes Sociais</h3>
           <div className={styles.linkContainer}>
-          <a>
-            <RiInstagramFill />
-          </a>
-          <a>
-            <SiFacebook />
-          </a>
-          <a>
-            <FaXTwitter />
-          </a>
+            <a>
+              <RiInstagramFill />
+            </a>
+            <a>
+              <SiFacebook />
+            </a>
+            <a>
+              <FaXTwitter />
+            </a>
           </div>
         </div>
       </div>

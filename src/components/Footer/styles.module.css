@@ -119,6 +119,12 @@ ul, li, a {
     align-self: center;
 }
 
+.emailMessage {
+    color: rgb(194, 0, 0);
+    position: absolute;
+    top:-1rem;
+}
+
 @media (max-width: 790px){
     .container {
         display: flex;
@@ -148,6 +154,10 @@ ul, li, a {
        align-items: center;
        justify-content: center;
        margin-bottom: 2rem;
+    }
+
+    .emailMessage {
+        top: 36rem;
     }
 }
 
