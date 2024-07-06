@@ -69,7 +69,6 @@ Certifique-se de ter as seguintes ferramentas instaladas:
  Ao executar o projeto, um link com o resultado vai ser aberto no seu navegador padrão de forma automática!
 
 ``npm start``
-
 ## Considerações Finais 
 
 O projeto Dolce Vita Bakery foi uma excelente oportunidade para aplicar e expandir minhas habilidades em desenvolvimento web, design UX/UI e e-commerce. O resultado final é um website moderno e funcional que ajuda a doceria a alcançar novos clientes e expandir sua presença online.
