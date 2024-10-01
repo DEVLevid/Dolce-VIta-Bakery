@@ -50,7 +50,6 @@ Certifique-se de ter as seguintes ferramentas instaladas:
  git clone https://github.com/DEVLevid/Dolce-VIta-Bakery
 
  ```
-
 4- **Acesse o arquivo**
 
  Abra o terminal e procure pelo arquivo do projeto:
